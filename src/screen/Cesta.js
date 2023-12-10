@@ -1,5 +1,7 @@
 import React from "react";
-import { Image, StyleSheet, Dimensions, Text, View } from "react-native";
+import { Image, StyleSheet, Dimensions, View } from "react-native";
+
+import Texto from "../components/Texto";
 
 import topo from "../../assets/topo.png";
 import logo from "../../assets/logo.png";
@@ -10,19 +12,19 @@ export default function Cesta() {
   return (
     <>
       <Image source={topo} style={estilos.topo} />
-      <Text style={estilos.titulo}>Detalhe da cesta</Text>
+      <Texto style={estilos.titulo}>Detalhe da cesta</Texto>
 
       <View style={estilos.cesta}>
-        <Text style={estilos.nome}>Cesta de Verduras</Text>
+        <Texto style={estilos.nome}>Cesta de Verduras</Texto>
         <View style={estilos.fazenda}>
-          <Image source={logo} style={estilos.imagemFazenda}/>
-          <Text style={estilos.nomeFazenda}>Jenny Jack Farm</Text>
+          <Image source={logo} style={estilos.imagemFazenda} />
+          <Texto style={estilos.nomeFazenda}>Jenny Jack Farm</Texto>
         </View>
-        <Text style={estilos.descricao}>
+        <Texto style={estilos.descricao}>
           Uma cesta com produtos selecionados cuidadosamente da fazenda direto
           para a sua cozinha.
-        </Text>
-        <Text style={estilos.preco}>R$ 40,00</Text>
+        </Texto>
+        <Texto style={estilos.preco}>R$ 40,00</Texto>
       </View>
     </>
   );
@@ -53,11 +55,11 @@ const estilos = StyleSheet.create({
     lineHeight: 42,
     fontWeight: "bold",
   },
-  fazenda:{
+  fazenda: {
     flexDirection: "row",
     paddingVertical: 12,
   },
-  imagemFazenda:{
+  imagemFazenda: {
     width: 32,
     height: 32,
   },
