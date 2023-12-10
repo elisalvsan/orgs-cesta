@@ -7,6 +7,7 @@ import {
 } from "@expo-google-fonts/montserrat";
 
 import Cesta from "./src/screen/Cesta";
+import mock from "./src/mocks/cesta";
 
 export default function App() {
   const [fonteCarregada] = useFonts({
@@ -21,7 +22,7 @@ export default function App() {
   return (
     <SafeAreaView>
       <StatusBar />
-      <Cesta />
+      <Cesta {...mock}/>
     </SafeAreaView>
   );
 }
